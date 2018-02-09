@@ -1,0 +1,29 @@
+{% extends "base.twig" %}
+{% block title %} Home {% endblock %}
+{% block head %}
+    {{ parent() }}
+    <link rel="stylesheet" href={{ asset('hello.css', 'css') }}>
+{% endblock %}
+{% block content %}
+    <br>
+    <br>
+    <div class="logejat" id="{{ logejat }}"></div>
+    <!--<h1> Hello Elna!</h1>-->
+    {{ dades|raw}}
+
+
+
+    <div class="[ panel panel-default ] panel-google-plus" id="lastEntryPan">
+        <h2 class="lastEntry"> Últimas entradas de DOGYGRAM: </h2>
+    </div>
+
+
+
+
+
+    <button id="loadmore">Loadmore</button>
+    <script src={{ asset('hello.js', 'js') }}></script>
+
+
+
+{% endblock %}
